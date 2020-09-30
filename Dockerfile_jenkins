@@ -8,7 +8,7 @@ RUN apt-get -y update && apt-get -y upgrade \
 RUN mkdir /var/lib/jenkins
 WORKDIR /var/lib/jenkins
 RUN wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - \ 
-    &&  apt-get install jenkins
+    &&  sudo apt-get install jenkins
 EXPOSE 8081
 COPY ["run"]
 
